@@ -16,10 +16,10 @@ def predict():
     else:
         predictions = pr.predict(gpa,score,"SAT2400")
     if predictions[0]==1:
-        return "Congratulations, you got in!"
+        return "I would recommend you apply as a match/safety."
     else:
         if predictions[0]==0:
-            return "Sorry, rejected."
+            return "This would work as a high reach."
         return "Something went wrong."
 
 @app.route('/')
