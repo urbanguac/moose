@@ -1,0 +1,9 @@
+.DS_STORE
+*.git
+.git
+*.pyc
+*.tfevents.*
+model.*
+*.index
+*.meta
+*.data*
