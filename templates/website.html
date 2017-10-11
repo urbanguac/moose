@@ -12,9 +12,8 @@
             <div class="page-header">
               <h1>The Dean<small> ® Priansh Shah 2017</small></h1>
             </div>
-            
             <form action="/predict" method="POST" role="form">
-                <legend>Chance yourself at CMU! (General, accuracy: 76.4045%)</legend>
+                <legend>Chance yourself at {% college['name'] %}! (accuracy: {% college['accuracy'] %})</legend>
             
                 <div class="form-group">
                     <label for="gpa">GPA</label>
@@ -26,7 +25,7 @@
                     <input type="text" class="form-control" id="test_score" name="test_score" placeholder="2400">
                 </div>                
             
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Chance Me</button>
             </form>
             
         </div>
