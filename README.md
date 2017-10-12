@@ -28,6 +28,9 @@ Quick stats: Geforce 1060, 6gb, ~4 minutes for 150k steps and ~78.5% accuracy.
 
 `python website.py`, you'll need Flask.
 
+![Form](images/form.png)
+
+
 ## FAQS
 
 **Does this mean colleges don't care about me as a person for the most part?**

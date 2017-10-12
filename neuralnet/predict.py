@@ -44,7 +44,7 @@ feature_columns = [tf.contrib.layers.real_valued_column("", dimension=2)]
 classifier = tf.contrib.learn.DNNClassifier(feature_columns=feature_columns,
                                             hidden_units=[10, 20, 10],
                                             n_classes=3,
-                                            model_dir="./neuralnet/train/model/" +
+                                            model_dir="./train/model/" +
                                             dataset_filename[dataset_filename.rfind(
                                                 '/') + 1:-4],
                                             config=tf.contrib.learn.RunConfig(

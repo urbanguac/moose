@@ -18,3 +18,5 @@ Trained on GeForce 1060, 6GB. ~4 minutes for 150,000 steps @ 78.5% accuracy on a
 No overfitting observed. Cross validation dataset and cross validation scripts are not provided due to licensing issues. :sadparrot:
 
 *Interestingly, it would appear even if overfitting occurred, that this may not affect our true accuracy, as college admissions behave as if overfitted... but this is a conjecture to be tested at a later point.*
+
+The `train` directory is at the root level. The `train` directory in this folder is used simply for testing.

@@ -13,7 +13,7 @@
               <h1>The Dean<small> ® Priansh Shah 2017</small></h1>
             </div>
             <form action="/predict" method="POST" role="form">
-                <legend>Chance yourself at {% college['name'] %}! (accuracy: {% college['accuracy'] %})</legend>
+                <legend>Chance yourself at {{ college['name'] }}! (accuracy: {{ college['accuracy'] }})</legend>
             
                 <div class="form-group">
                     <label for="gpa">GPA</label>
