@@ -30,7 +30,7 @@ if dataset_filename[-4:] != ".csv":
 
 # Data sets
 DATA_TRAINING = dataset_filename
-DATA_TEST = dataset_filename
+DATA_TEST = "I have removed the cross validation dataset."
 ''' We are expecting features that are floats (gpa, sat, act) and outcomes that are integers (0 for reject, 1 for accept) '''
 ##
 
