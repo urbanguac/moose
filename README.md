@@ -20,16 +20,25 @@ After training on a corpus of GPA+SAT data, it can predict admissions.
 
 See the README file in the `neuralnet` folder. You will need to call `main.py` from this directory, e.g. `python neuralnet/main.py .. args ..`.
 
+![Console](images/cmd.PNG)
+
 I have provided the CMU dataset I originally gathered by hand to train this network. More information on naming datasets is in the README file.
 
 Quick stats: Geforce 1060, 6gb, ~4 minutes for 150k steps and ~78.5% accuracy.
+
+Graph of loss over 150k steps:
+
+![Loss](images/loss.PNG)
+
+Graph of accuracy over 150k steps:
+
+![Accuracy](images/loss.PNG)
 
 ## Predictions
 
 `python website.py`, you'll need Flask.
 
 ![Form](images/form.png)
-
 
 ## FAQS
 
