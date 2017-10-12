@@ -73,11 +73,13 @@ maxsteps = int(input('> '))
 classifier.fit(input_fn=get_train_inputs, steps=maxsteps)
 
 # Evaluate loss.
-loss = classifier.evaluate(input_fn=get_test_inputs, steps=1)['loss']
-console.success('\nFinished with loss {0:f}'.format(loss))
+results = classifier.evaluate(input_fn=get_test_inputs, steps=1)
+print(results)
+console.success('\nFinished with loss {0:f}'.format(results['loss']))
 
 print("\nPlease provide a GPA and test score to chance.")
 cur_gpa = float(input('GPA: '))
+print("Given "+str(cur_gpa))
 test_score = int(input('Test Score: '))
 def new_samples():
     return np.array([[0.0, 0], [cur_gpa,test_score], [maxgpa, maxtest]], dtype=np.float32)
@@ -91,5 +93,5 @@ def returnChance(chance):
         return "admission"
 
 console.log("Testing:\nGPA: 0\nTest Score: 0\nPrediction: %s\nExpected: rejection"%returnChance(predictions[0]))
-console.log("Testing:\nGPA: %d\nTest Score: %d\nPrediction: %s\nExpected: admission"%(maxgpa, maxtest, returnChance(predictions[2])))
+console.log("Testing:\nGPA: %d\nTest Score: %0.1f\nPrediction: %s\nExpected: admission"%(maxgpa, maxtest, returnChance(predictions[2])))
 console.success("Predicting:\nGPA: %d\nTest Score: %d\nPrediction:%s"%(cur_gpa, test_score, returnChance(predictions[1])))
