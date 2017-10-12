@@ -51,7 +51,7 @@ classifier = tf.contrib.learn.DNNClassifier(feature_columns=feature_columns,
                                             n_classes=3,
                                             model_dir="./train/model/"+dataset_filename[dataset_filename.rfind('/')+1:-4],
                                             config=tf.contrib.learn.RunConfig(
-                                                save_checkpoints_secs=60))
+                                                save_checkpoints_secs=10))
 ##
 
 # Helper functions
@@ -73,8 +73,8 @@ maxsteps = int(input('> '))
 classifier.fit(input_fn=get_train_inputs, steps=maxsteps)
 
 # Evaluate accuracy.
-accuracy_score = classifier.evaluate(input_fn=get_test_inputs, steps=1)["accuracy"]
-console.success('\nFinished with accuracy {0:f}'.format(accuracy_score))
+accuracy_score = classifier.evaluate(input_fn=get_test_inputs, steps=1)['loss']
+console.success('\nFinished with loss {0:f}'.format(loss))
 
 print("\nPlease provide a GPA and test score to chance.")
 cur_gpa = float(input('GPA: '))
