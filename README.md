@@ -22,6 +22,8 @@ See the README file in the `neuralnet` folder. You will need to call `main.py` f
 
 Assemble a dataset CSV file. Cut 1/3 of the contents into another CSV file, this new file is your test dataset.
 
+**Important: if you want the raw accuracy set both training and testing to same CSV and go for one step. Otherwise it always spits out 0.5 -- this is not correct, it's messing up because there are exactly 11 acceptances and 11 rejections in the test dataset. For you it might spit out another number that is the ratio of acceptances and rejections in test dataset. For these, just train to 150k steps or loss around 0.7 or below.**
+
 ![Console](images/cmd.PNG)
 
 I have provided the CMU dataset I originally gathered by hand to train this network. More information on naming datasets is in the README file.
