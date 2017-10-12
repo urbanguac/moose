@@ -6,7 +6,7 @@ import sys
 from console_logging.console import Console
 from sys import argv
 
-usage = "\nUsage:\npython main.py path/to/dataset.csv #MAX_GPA #MAX_TEST_SCORE\n\nExample:\tpython main.py harvard.csv 6.0 2400\n\nThe dataset should have one column of GPA and one column of applicable test scores, no headers."
+usage = "\nUsage:\npython neuralnet/main.py path/to/dataset.csv #MAX_GPA #MAX_TEST_SCORE\n\nExample:\tpython main.py harvard.csv 6.0 2400\n\nThe dataset should have one column of GPA and one column of applicable test scores, no headers."
 
 console = Console()
 console.setVerbosity(3) # only logs success and error
@@ -90,6 +90,6 @@ def returnChance(chance):
     if chance==1:
         return "admission"
 
-console.log("Testing:\nGPA: 0\nTest Score: 0\nPrediction:%s\nExpected: rejection"%returnChance(predictions[0]))
-console.log("Testing:\nGPA: %d\nTest Score: %d\nPrediction:%s\nExpected: admission"%(maxgpa, maxtest, returnChance(predictions[2])))
-console.log("\nPredicting:\nGPA: %d\nTest Score: %d\nPrediction:%s"%(cur_gpa, test_score, returnChance(predictions[1])))
+console.log("Testing:\nGPA: 0\nTest Score: 0\nPrediction: %s\nExpected: rejection"%returnChance(predictions[0]))
+console.log("Testing:\nGPA: %d\nTest Score: %d\nPrediction: %s\nExpected: admission"%(maxgpa, maxtest, returnChance(predictions[2])))
+console.success("Predicting:\nGPA: %d\nTest Score: %d\nPrediction:%s"%(cur_gpa, test_score, returnChance(predictions[1])))

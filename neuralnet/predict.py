@@ -6,7 +6,7 @@ from sys import argv
 from console_logging.console import Console
 console = Console()
 
-usage = "\nUsage:\npython main.py path/to/dataset.csv #MAX_GPA #MAX_TEST_SCORE\n\nExample:\tpython main.py harvard.csv 6.0 2400\n\nThe dataset should have one column of GPA and one column of applicable test scores, no headers."
+usage="You shouldn't be running this file."
 
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 console.setVerbosity(3)  # only error, success, log
