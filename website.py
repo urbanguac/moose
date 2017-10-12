@@ -30,7 +30,7 @@ def predict():
 
 @app.route('/')
 def home():
-    return render_template('website.html', college={'name':'CMU','accuracy':'76.4045'})
+    return render_template('website.html', college={'name':'CMU','accuracy':'78.6517'})
 
 if __name__ == '__main__':
     app.debug=True
