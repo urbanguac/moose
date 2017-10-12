@@ -93,5 +93,5 @@ def returnChance(chance):
         return "admission"
 
 console.log("Testing:\nGPA: 0\nTest Score: 0\nPrediction: %s\nExpected: rejection"%returnChance(predictions[0]))
-console.log("Testing:\nGPA: %d\nTest Score: %0.1f\nPrediction: %s\nExpected: admission"%(maxgpa, maxtest, returnChance(predictions[2])))
+console.log("Testing:\nGPA: %0.1f\nTest Score: %d\nPrediction: %s\nExpected: admission"%(maxgpa, maxtest, returnChance(predictions[2])))
 console.success("Predicting:\nGPA: %d\nTest Score: %d\nPrediction:%s"%(cur_gpa, test_score, returnChance(predictions[1])))
