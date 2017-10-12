@@ -72,8 +72,8 @@ maxsteps = int(input('> '))
 # Create the classifier. Take maxsteps steps.
 classifier.fit(input_fn=get_train_inputs, steps=maxsteps)
 
-# Evaluate accuracy.
-accuracy_score = classifier.evaluate(input_fn=get_test_inputs, steps=1)['loss']
+# Evaluate loss.
+loss = classifier.evaluate(input_fn=get_test_inputs, steps=1)['loss']
 console.success('\nFinished with loss {0:f}'.format(loss))
 
 print("\nPlease provide a GPA and test score to chance.")
