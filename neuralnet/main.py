@@ -6,14 +6,14 @@ import sys
 from console_logging.console import Console
 from sys import argv
 
-usage = "\nUsage:\npython neuralnet/main.py path/to/dataset.csv #MAX_GPA #MAX_TEST_SCORE\n\nExample:\tpython main.py harvard.csv 6.0 2400\n\nThe dataset should have one column of GPA and one column of applicable test scores, no headers."
+usage = "\nUsage:\npython neuralnet/main.py path/to/dataset.csv path/to/crossvalidation_dataset.csv #MAX_GPA #MAX_TEST_SCORE\n\nExample:\tpython main.py harvard.csv 6.0 2400\n\nThe dataset should have one column of GPA and one column of applicable test scores, no headers."
 
 console = Console()
 console.setVerbosity(3) # only logs success and error
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
 
 try:
-    script, dataset_filename, maxgpa, maxtest = argv
+    script, dataset_filename, test_filename, maxgpa, maxtest = argv
 except:
     console.error(str(sys.exc_info()[0]))
     print(usage)
@@ -30,7 +30,7 @@ if dataset_filename[-4:] != ".csv":
 
 # Data sets
 DATA_TRAINING = dataset_filename
-DATA_TEST = "I have removed the cross validation dataset."
+DATA_TEST = test_filename
 ''' We are expecting features that are floats (gpa, sat, act) and outcomes that are integers (0 for reject, 1 for accept) '''
 ##
 

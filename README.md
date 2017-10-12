@@ -20,6 +20,8 @@ After training on a corpus of GPA+SAT data, it can predict admissions.
 
 See the README file in the `neuralnet` folder. You will need to call `main.py` from this directory, e.g. `python neuralnet/main.py .. args ..`.
 
+Assemble a dataset CSV file. Cut 1/3 of the contents into another CSV file, this new file is your test dataset.
+
 ![Console](images/cmd.PNG)
 
 I have provided the CMU dataset I originally gathered by hand to train this network. More information on naming datasets is in the README file.

@@ -4,7 +4,7 @@ Due to a switch to proprietary information, we are no longer updating the corpus
 
 Usage:
 
-```python neuralnet/main.py path/to/dataset.csv #maxgpa #maxtestscore```
+```python neuralnet/main.py path/to/dataset.csv path/to/test_dataset.csv #maxgpa #maxtestscore```
 
 Run from main directory.
 
