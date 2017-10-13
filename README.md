@@ -1,5 +1,7 @@
 # Chancey, college admissions predictor.
 
+[ ![Codeship Status for pshah123/ChanceyNN](https://app.codeship.com/projects/920e3190-9232-0135-1d57-766c0c9c4a48/status?branch=master)](https://app.codeship.com/projects/250609) 
+
 Chancey is a predictor for college admissions based on GPA and SAT2400 data. Surprisingly enough, despite claims of a `holistic` approach, most colleges easily reach ~80% accuracy on this model with ~50 samples of data.
 
 ## Reqs
