@@ -8,3 +8,7 @@ model.*
 *.meta
 *.data*
 */__pycache__/*
+*.csv
+checkpoint
+*.pb
+*.pbtxt
